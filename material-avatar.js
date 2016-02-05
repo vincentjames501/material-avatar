@@ -77,8 +77,8 @@
   }
 
   Avatar.prototype.init = function(){
-    this.width   = parseInt(this.element.offsetWidth, 10);
-    this.height  = parseInt(this.element.offsetHeight, 10);
+    this.width   = parseInt(this.element.offsetWidth || this.element.style.width, 10);
+    this.height  = parseInt(this.element.offsetHeight || this.element.style.height, 10);
 
     this.canvas.setAttribute('width', this.width);
     this.canvas.setAttribute('height', this.width);
